@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+     
+    <title>Home page</title>
+    
+    <style>
+        body{ 
+            background-color: black;
+            color: white;
+        }
+        header{
+            background-color: black;
+            color: white; 
+            display: grid;
+            grid-template-columns:repeat(2,1fr);
+
+        }
+        .banner{
+            display:flex;
+            flex-direction:row;
+            margin-top:400px; 
+            
+        
+
+        }
+        .imag1{
+
+            position: relative;
+            bottom:500px;
+                       
+            }
+        
+        .desc{
+        position: relative;
+        font-size: 20px;
+        bottom:300px;  
+        margin-left:500px;
+
+        }
+     
+        
+        .icon{ 
+             display: flex;
+
+             flex-direction:row; 
+             justify-content:end;
+             
+        
+             
+    
+        } 
+        .search{
+            height:10px;
+            width: 20px;
+            background-color: red;
+            color:white;
+            visibility:hidden;
+            right:30px; 
+            top:40px;
+            z-index:5;
+            transform:translateX(30); 
+            
+        
+        }
+        .search-icon{
+            position:relative;
+        }
+        .search-icon:hover  .search{ 
+            visibility:visible;
+            font-size: 30px;
+        }  
+        
+        .cart{
+            height: 20px;
+            width: 40px;
+            background-color: red;
+            color:white;
+            visibility:hidden;
+            right:30px; 
+            z-index:5;
+            transform:translateX(30); 
+            
+        
+        }
+        .cart-icon{
+            position:relative;
+            
+        }
+        .cart-icon:hover  .cart{ 
+            visibility:visible;
+            font-size: 30px;
+        }  
+        
+        .custom{
+            height: 20px;
+            width: 40px;
+            background-color: red;
+            color:white;
+            visibility:hidden;
+            right:30px; 
+            top:40px; 
+            z-index:5;
+            transform:translateX(30); 
+        
+        }
+        
+            .buton{
+                   background-color: blue;
+                   color:white;
+                   padding: 10px;
+
+            } 
+        
+        .custom-icon{
+            position:relative;
+
+        }
+        .custom-icon:hover  .custom{ 
+            visibility:visible;
+            font-size: 30px;
+        }  
+       
+
+        .imag1{
+        margin-bottom: 30px;
+           
+
+
+           
+        }
+        .button{
+            background-color: coral;
+            color:white;
+            padding:10px;  
+        } 
+        div{
+            margin: 80px;
+        }
+        .product{ 
+            position: relative;
+            text-align: center;
+            align-content: center; 
+            top:-200px; 
+
+        }
+        .photos{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            gap: 20px;
+        }
+        .photos{
+            display:grid;
+            flex-direction:row;
+            flex-wrap:nowrap; 
+            justify-content:space-between;
+            align-items:center;
+            transform:scale(1.1);
+            } 
+            .img1:hover{
+              transform:scale(1.1);
+            }
+            .img2:hover{
+                transform:scale(2);
+              }
+              .img3:hover{
+                transform:scale(1.1);
+              }
+              .img4:hover{
+                transform:scale(2);
+              }
+             .img5:hover{
+                transform:scale(1.1);
+              }
+            .top{
+                text-align: center;
+                align-content: center;  
+              } 
+              .hai{
+                color: whitesmoke;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;  
+              }
+              .helo{
+            
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                row-gap: 20px; 
+                column-gap: 20px; 
+              }
+             
+              .checked{
+
+                color:red;
+                font-size: 20px;
+              }
+
+              .addtocart{
+                background-color: darkorange;
+                color:white;
+                border: 2px solid;
+                padding:20px;
+                text-align: center;
+                align-content: center;
+              }
+              .browser{
+                 color:white; 
+                 background-color: black;
+                 text-align: center;
+                 align-content:center;
+                 border:2px solid white;
+                 height:600px;
+                 width:450px;
+              } 
+              .advn{
+                text-align: center;
+                align-content:center;
+            
+              }
+              .advng{ 
+            
+                color: whitesmoke;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                position: relative; 
+                bottom:-100px;
+                
+                
+                
+              }
+                footer{
+                    display: grid;
+                    grid-template-columns: repeat(4,1fr);
+                    height:500px;
+                    margin-top:80px;
+                    bottom:100px;
+                    position: relative;
+                    bottom:-150px;
+
+                    
+                }
+                .email{
+                    
+                     border: 2px solid white;
+                    background-color: black;
+                    color: white;
+                    font-size: 40px;
+                    padding:10px;
+                    width:350px;
+                }
+                .sub{
+                    font-size: 30px;
+                    background-color: orangered;
+                    color: white;
+                    } 
+
+                 .last{
+
+                    position: relative;
+                    left:2050px;
+                    bottom:130px;
+                     padding-left:30px;
+                     font-size: 30px;
+                 } 
+                 .search-img{
+                    height:50px;
+                 } 
+                 .cart-img{
+                    height:50px;
+                 }  
+                 .custom-img{
+                    height:50px;
+                 }                      
+</style>
+</head>
+<body>
+    <header >
+
+        <section class = "header-1">
+        
+        <h1 style = "font-size:38px;">Tech-shop</h1>
+        </section>
+        <section class ="icon">
+            <div class = "search-icon">
+            <img class = "search-img" style = "margin-right:30px; padding-right:20px;" src="./images/search.jpg.png"><span class = "search"> search</span> 
+            </div> 
+             <!-- <span class = "search"> search</span>   -->
+             <div class = "cart-icon ">
+            <img class = "cart-img"style = "margin-right:20px;  padding-right:20px;"src="./images/icons8-cart-24.png"><span class="cart">cart</span>
+             </div>
+             <!-- <span class="cart">cart</span>  -->
+              <div class = "custom-icon">
+                <a href = "Registration.html"> <img class = "custom-img" style = "margin-right:20px; padding-right:20px; "src="./images/icons8-customer-32.png"/></a>
+           
+          <div class = "custom">
+            <h1>Hello</h1>
+            <h2> Access account and manage orders</h2>
+            <input class="buton" type="button" value="Login/signup">
+            </div>
+            </div> 
+            
+        </section>
+
+    </header>
+    <div class = "banner" >
+       
+        <div class="desc"> 
+            <h1>boAt Airdopes 131</h1>
+            <h1>Featherweight For</h1>
+           <h1>Comfort All-Day.</h1>
+           <h1>₹1,099</h1> 
+           <h1><del> ₹2,990</del></h1>
+       <button class="button"> Shop now</button>
+        </div>
+       <div class = "banner-image" >
+        
+        <img class="imag1" src="./boat131-3.png" alt="boat", height="800px", width="900px">  
+</div>
+    </div>
+       
+</div> 
+        <h1 class="product">Featured Products</h1>
+        <div class="photos">
+            <div>
+        
+           <h3>Jbl Endurance Run<br>
+                   Sports</h3>
+          <img class="img1" src="./images/image21.jpg.png" alt="boot" height="100px" width="200px">
+          <p>₹999 <del>₹1,599</del></p>
+        </div>
+        <div>
+            <h3>boat airdopes203</h3>
+            <img class="img2" src="./images/img22.jpg.png" alt="boot" height="200px" width="200px"> 
+            <p>₹1,074 <del>₹3,999</del></p> 
+            </div>
+        <div>
+        <h3>boat RockerZ 518</h3>
+        <img class="img3" src="./images/boat518-4.png" alt="boot" height="100px" width="200px"> 
+        <p>₹1,299 <del>₹3,990</del></p> 
+        </div>
+        <div>
+            <h3>JBL Tune760NC</h3>
+        <img class="img4" src="./images/boat518-1.png" alt="boot" height="200px" width="200px"> 
+        <p>₹5,999 <br>
+            <del>₹7,999</p>
+        </div>
+       <div>
+        <h3>boAt rockerz25</h3>
+        <img class="img5" src="./images/image11.png" alt="boot" height="100px" width="200px">
+        <p>₹899 <del>₹2,900</p> 
+        </div> 
+    </div>
+        <h1 class="top">Top products</h1>
+        <section class="hai">
+            <h1>All</h1>
+            <h1>Headphones</h1>
+            <h1>Earphones</h1>
+            <h1>Neckbands</h1>
+        </section>
+
+    <section class="helo">
+
+        <div style="border: 2px solid white",height="400px",width="350px">
+        
+            <img src="./images/jbl660nc-1.png" alt="boat1" height="200px" width="200px">
+            <h3 style="color: red;">  ★★★★★★</h3>
+            <h3>JBL Live 660 NC<br>
+            Wireless Over-Ear NC <br>
+               Headphone</h3>
+               _______________
+            <p>₹9,999 <del>₹14,999</del></p> 
+            <h1 class="addtocart">Add to cart</h1>
+        </div>
+     
+        <div style="border: 2px solid white",height="400px",width="350px">
+            <img  src="./images/boat518-1.png" alt="boat2" height="200px" width="200px"> 
+            <h3 style="color: red;">  ★★★★★★</h3>
+            <h3>boAt Rockerz 518<br>
+            On-Ear Wireless headphone</h3>
+            _______________
+            <p>1,299 <del>₹3,990</p> 
+            <h1 class="addtocart">Add to cart</h1>
+        </div> 
+        <div style="border: 2px solid white",height="400px",width="350px">
+              <img src="./images/boat131-1.png" alt="boat3" height="200px" width="200px"> 
+              <h3 style="color: red;">  ★★★★★★</h3>
+              <h3>boAt  Airdopes 131<br>
+               Wireless in Ear Earbuds</h3>
+               _______________
+                 <p>1,099 <del>₹2,990</p>
+                   <h1 class="addtocart">Add to cart</h1>
+        </div>
+          <div style="border: 2px solid white",height="400px",width="350px">
+               <img src="./images/boat4.jpg.png" alt="boat4" height="200px" width="200px"> 
+               <h3 style="color: red;">  ★★★★★★</h3>
+                <h3>boAt  BassHeads 110<br>
+                In-Ear Wired Earphones</h3>
+            _______________
+                <p>₹499 <del>₹999</del></p>
+                <h1 class="addtocart">Add to cart</h1>
+                </div>
+            <div style="border: 2px solid white",height="400px",width="350px">
+                   <img src="./images/boat410-1.png" alt="boat5" height="200px" width="200px"> 
+                   <h3 style="color: red;">  ★★★★★★</h3>
+                      <h3>boAt  Rockerz 410<br>
+                    Bluetooth & Wired On-Ear<br>
+                      Headdphones</h3>
+                     _______________
+                    <p>1,599 <del>₹2,990</p>
+                    <h1 class="addtocart">Add to cart</h1>
+                </div>
+                <div style="border: 2px solid white",height="400px",width="350px">
+                    <img src="./images/jbl200bt-6.png" alt="boat6" height="200px" width="200px"> 
+                    <h3 style="color: red;">  ★★★★★★</h3>
+                    <h3>JBL Live 200BT<br>
+                     IN-Ear Wireless Neckbands</h3>
+                    _______________
+                    <p>3,699 <del>₹5,299</p>
+                        <h1 class="addtocart">Add to cart</h1>
+                </div>
+                <div style="border: 2px solid white",height="400px",width="350px"> 
+                        <img src="./images/boat410-1.png" alt="boat7"  height="200px" width="200px">
+                        <h3 style="color: red;">  ★★★★★★</h3>
+                        <h3>Sony WH-XB910N<br>
+                        Wireless Over-Ear<br>
+                    Headphones</h3>
+                        _______________
+                        <p>13,489 <del>₹19,990</p>
+                            <h1 class="addtocart">Add to cart</h1>
+                 </div>
+                <div style="border: 2px solid white",height="400px",width="350px">
+                    <img src="./images/jbl760nc-6.png" alt="boat8"  height="200px" width="200px"> 
+                    <h3 style="color: red;">  ★★★★★★</h3>
+                    <h3>JBL Tune 760NC<br>
+                    Wireless over-Ear<br>
+                Headphones</h3>
+                    _______________
+                    <p>5,999 <del>7,999</p>
+                     <h1 class="addtocart">Add to cart</h1>
+                 </div>
+                <div style="border: 2px solid white",height="400px",width="350px">
+                    <img src="./images/image11.png" alt="boat9"  height="200px" width="200px"> 
+                    <h3 style="color: red;">  ★★★★★★</h3>
+                     <h3>boAt RockerrZ 255<br>
+                    In -Ear Wireless Neckbands</h3>
+                     _______________
+                    <p>₹899 <del>₹2,999</p>
+                    <h1 class="addtocart">Add to cart</h1>
+                </div> 
+                <div style="border: 2px solid white",height="400px",width="350px"> 
+                    <img src="./images/jbl100-1.png" alt="boat10"  height="200px" width="200px"> 
+                    <h3 style="color: red;">  ★★★★★★</h3>
+                     <h3>JBL Wave 100<br>
+                    In-Ear Truly Wireless Earbuds</h3>
+                    _______________
+                    <p>₹2,999 <del>₹6,990</p>
+                     <h1 class="addtocart">Add to cart</h1>
+                </div>                  
+                 <div style="border: 2px solid white",height="400px",width="350px">
+                    <img src="./images/sony11.jpg.png" alt="boat11"  height="200px" width="200px">  
+                    <h3 style="color: red;">  ★★★★★★</h3>
+                    <h3>Sony WF-1000XM4<br>
+                     Wireless In-Ear NC<br>
+                    Headphones</h3>
+                     ____________________
+                     <p> <b>₹19,990   <del>₹24,990</del></b></p>
+                     <h1 class="addtocart">Add to cart</h1> 
+                 </div>  
+                 <div>
+                    <h1 class="browser">Browse all products</h1>
+                 </div>
+                </section>
+             <h1 class="advn"> Our Advantages</h1>
+             
+            <section class="advng">
+                    <h1 style="margin-left:150px;">
+                        <i class="fa-solid fa-truck" style="color: red;"></i> 
+                        <b>Express Delivery</b><br>
+                    ships in 24 hours</h1>
+                    <h1><i class="fa-solid fa-shield-halved" style="color: red;"></i>
+                        <b>Brand waranty</b><br>
+                    100% Original Products</h1>
+                    <h1><i class="fa-duotone fa-solid fa-tags" style="color:red;"></i><b>Excuting Deals</b><br>
+                    On all prepaid orders</h1> 
+                    <h1><i class="fa-sharp fa-solid fa-credit-card" style="color:red;"></i>
+                    <b>Secure payments</b><br>
+                    ssl/secure certificate</h1>
+            </section>
+
+
+            <footer>
+                <section>
+                    <h1 style="font-size: 50px;">Tech-shop</h1>
+                    <p>
+                        Subscribe to our Emails to recieve<br>
+                        early discount offers, and new products<br>
+                        info.
+                    </p>
+                    <p class="email">Email address</p>
+                    
+                    <br>
+                    <button class="sub">Subscribe</button>
+                </section>
+                <section>
+                     
+                   
+                        <h1>Help</h1>
+                        <h2>FAQs</h2>
+                        <h2>Track order</h2>
+                        <h2>Cancel order</h2>
+                        <h2>Return order</h2>
+                        <h2>Waranty info</h2>
+                   
+                </section> 
+                <section>
+                   
+                    
+                    <h1>Policies</h1>
+                    <h2>Return Policy</h2>
+                    <h2>Security</h2>
+                    <h2>Site map</h2>
+                    <h2>Privacy policy</h2>
+                    <h2>Terms & Conditions</h2>
+                
+                    
+                </section>
+                <section>
+                    <h1>Company</h1>
+                    <h2>About us</h2>
+                    <h2>Contactus</h2>
+                    <h2>Service center</h2>
+                    <h2>Careers</h2>
+                    <h2>Affiliates</h2>
+                </section>
+                <section>
+    <hr style="border:1px solid white" width = "450%" /> 
+               <h1 style="margin-left: 140px;">2024|All rights reserved.Bult by| sarvesh</h1>
+               <div class="last" >
+                <i style="padding:30px" class="fa-brands fa-facebook"></i>
+                <i style="padding:30px;" class="fa-brands fa-twitter"></i>
+                <i style="padding:30px ;" class="fa-brands fa-instagram"></i>
+                <i style="padding:20px ;" class="fa-brands fa-linkedin-in"></i> 
+               </div>
+             </section>
+
+            </footer> 
+            </body>
+            </html>
+        
+                
+
+        
+</body>
+</html>

@@ -1,0 +1,406 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Cartpage</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+        }
+        .cart-container{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            padding-top: 97px;
+            padding-left: 70px;
+        }
+        .container10 {
+            /* justify-content: center; */
+            align-items: center;
+            display: flex;
+            /* height: 100%; */
+            text-align: center;
+            margin-top: -20px;
+        }
+        button {
+            width: 32px;
+            height: 28px;
+            font-size: 21px;
+            color: honeydew;
+            background-color: rgb(45, 42, 42);
+            border: none;
+        }
+
+
+
+        #counting{
+            width: 32px;
+            height: 28px;
+            background-color: black; 
+            font-size: 20px;
+            color: red;
+            border-radius: none;
+
+        }
+        .cart-block1{
+            display: flex;
+        }
+        .cart-block-content, .cart-block-content1{
+            padding-left: 20px;
+        }
+        .delete-icon{
+            position: relative;
+            left: 278px;
+            bottom: 134px;
+        }
+        .cart-block2{
+            padding-top: 130px;
+            position: relative;
+            right: 376px;
+            display: flex;
+            
+        }
+       .cart-container1{
+        display: flex;
+    
+        border-bottom: 2px solid #383030;
+    /* padding-bottom: 20px; */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    width: 401px;
+       }
+       .cart-products{
+        height: 450px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 500px;
+        scrollbar-color: #1c1a1a #1c1a1a;
+        background-color: #1c1a1a;
+        margin-bottom: 200px;
+        margin-left: 20px;
+        margin-top: 52px;
+       }
+       .order-summary h2{
+        color: #beaeae !important;
+       }
+       .order-summary{
+        margin-left: 128px;
+       }
+       .order-item{
+        border-bottom: 2px solid gray;
+       }
+       .order-item div{
+        color: white;
+        padding-bottom: 24px;
+
+       }
+       .order-item2 div{
+        color: white;
+        padding-bottom: 24px;
+        padding-left: 196px;
+        position: relative;
+        bottom: 120px;
+
+       }
+       
+       .order-price1{
+        padding-left: 168px;
+       }
+       .main-order{
+        width: 350px;
+        margin-top: 50px;
+       }
+       .price-amount{
+        position: relative;
+        left: 191px;
+       }
+       .checkout{
+        width: 360px;
+        border-radius: 3px;
+        background-color: red;
+        font-size: 20px;
+       }
+       .cart-p1{
+        color: white;
+        width: 270px;
+       }
+       .icons{ 
+        display: flex;
+        padding-left:12px;
+        flex-direction:row; 
+        justify-content: end;
+
+   } 
+   header{
+    background-color: black;
+    color: white; 
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+   }
+
+
+       .buton{
+              background-color: blue;
+              color:white;
+              padding: 10px;
+
+       } 
+       footer{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        height:500px;
+        margin-top:80px;
+        bottom:100px;
+        position: relative;
+        bottom:200px;
+        background-color: rgba(19, 10, 10, 0.616);
+
+        
+    }
+    .email{
+        
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+        font-size: 40px;
+        padding:10px;
+        width:350px;
+    }
+    .sub{
+        font-size: 20px;
+        background-color: orangered;
+        color: white;
+        width:200px;
+        } 
+
+     .last{
+        position: absolute;
+        left:1700px;
+        bottom:-20px;
+        padding-left:30px;
+        font-size: 30px;
+     }   
+   
+   
+  
+
+       
+    </style>
+
+</head>
+<body>
+    <header>
+        <section>
+            <h1>Tech shop</h1>
+        </section>
+        <section class = "icons" >
+            <div class = "search-icon">
+            <img  style="height:30px;width:30px; margin-right:30px;" src="./images/search.jpg.png"/>
+            </div>
+            <div class="cart-icon"> 
+            <img style ="height:30px;width:30px; margin-right:30px;" src="./images/icons8-cart-24.png"/>
+            </div> 
+            <div class="custom-icon">
+            <img style ="height:30px;width:30px; margin-right:30px;" src="./images/icons8-customer-32.png"/>
+        
+            </div>
+               
+            
+        </section>
+    </header>
+       
+    
+        <div class="cart-container">
+            <div class="cart-products">
+                <div class="cart-container1">
+                    <div class="cart-image">
+                        <img src="./images/jbl660nc-1.png" width="92px">
+                    </div>
+                        
+                    <div class="block-content4">
+                        <div class="cart-block-content">
+                            <p class="cart-p1">JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                            <p class="sports-price">₹999<span class="sport-del"><del>₹1,999</del></span></p>
+                            <div class="container10">            
+                                <!-- adding button and heading to show the digits -->
+                                <!--increment() and decrement() functions on button click-->
+                                    <button onclick="increment()">+</button>
+                                    <p id="counting">1</p>
+                                    <button onclick="decrement()">-</button>        
+                                </div>
+                            
+                            <div class="delete-icon">
+                                <i class="fa-regular fa-trash-can" aria-hidden="true" style="color: white; background-color: black;"></i>
+
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="cart-container1">
+                    <div class="cart-image">
+                        <img src="./images/boat518-1.png" width="92px">
+                    </div>
+                        
+                    <div class="block-content4">
+                        <div class="cart-block-content">
+                            <p class="cart-p1">boAt Rockerz 518 On-Ear Wirless Headphones</p>
+                            <p class="sports-price">₹1,299<span class="sport-del"><del>₹3,9990</del></span></p>
+                            <div class="container10">            
+                                <!-- adding button and heading to show the digits -->
+                                <!--increment() and decrement() functions on button click-->
+                                    <button onclick="increment()">+</button>
+                                    <p id="counting">1</p>
+                                    <button onclick="decrement()">-</button>        
+                                </div>
+                            
+                            <div class="delete-icon">
+                                <i class="fa-regular fa-trash-can" aria-hidden="true" style="color: white; background-color: black;"></i>
+
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="cart-container1">
+                    <div class="cart-image">
+                        <img src="./images/boat131-1.png" width="92px">
+                    </div>
+                        
+                    <div class="block-content4">
+                        <div class="cart-block-content">
+                            <p class="cart-p1">boAt Airpods 131 Wireless In-Ear Earbuds</p>
+                            <p class="sports-price">₹1,099<span class="sport-del"><del>₹2,999</del></span></p>
+                            <div class="container10">            
+                                <!-- adding button and heading to show the digits -->
+                                <!--increment() and decrement() functions on button click-->
+                                    <button onclick="increment()">+</button>
+                                    <p id="counting">1</p>
+                                    <button onclick="decrement()">-</button>        
+                                </div>
+                            
+                            <div class="delete-icon">
+                                <i class="fa-regular fa-trash-can" aria-hidden="true" style="color: white; background-color: black;"></i>
+
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+                </div>
+                <div class="cart-container1">
+                    <div class="cart-image">
+                        <img src="./images/jbl660nc-2.png" width="92px">
+                    </div>
+                        
+                    <div class="block-content4">
+                        <div class="cart-block-content">
+                            <p class="cart-p1">JBL Live 660NC Wireless Over-Ear NC Headphones</p>
+                            <p class="sports-price">₹999<span class="sport-del"><del>₹1,999</del></span></p>
+                            <div class="container10">            
+                                <!-- adding button and heading to show the digits -->
+                                <!--increment() and decrement() functions on button click-->
+                                    <button onclick="increment()">+</button>
+                                    <p id="counting">1</p>
+                                    <button onclick="decrement()">-</button>        
+                                </div>
+                            
+                            <div class="delete-icon">
+                                <i class="fa-regular fa-trash-can" aria-hidden="true" style="color: white; background-color: black;"></i>
+
+                            </div>
+                        
+                        </div>
+            
+                    </div>
+                </div>
+          </div>
+
+         
+         <div class="order-summary">
+            <div class="main-order">
+            <h2 style="color: white !important;">Order Summary ( 4 items )</h2>
+                <div class="order-item">
+                    <div>Original Price <span class="order-price1">₹22,978</span></div>
+                    <div>Discount<span class="order-price" style="color: green; padding-left: 200px;" >-₹10,132</span></div>
+                    <div>Delivery<span class="order-price" style="color: green; padding-left: 210px;">Free</span></div>
+                </div>
+            </div>
+            <div class="total-price">
+                <p class="price1" style="color: white;">Total Price<span class="price-amount">₹12,846</span></p>
+            </div>
+            <button type="button" class="checkout">checkout</button>
+         </div>       
+        </div>
+    
+        <footer>
+            <section>
+                <h1 style="font-size: 50px;">Tech-shop</h1>
+                <h2>
+                    Subscribe to our Emails to recieve<br>
+                    early discount offers, and new products<br>
+                    info.
+                </h2>
+                <p class="email">Email address</p>
+                
+                <br>
+                <button class="sub">Subscribe</button>
+            </section>
+            <section>
+                 
+               
+                    <h1>Help</h1>
+                    <h2>FAQs</h2>
+                    <h2>Track order</h2>
+                    <h2>Cancel order</h2>
+                    <h2>Return order</h2>
+                    <h2>Waranty info</h2>
+               
+            </section> 
+            <section>
+               
+                
+                <h1>Policies</h1>
+                <h2>Return Policy</h2>
+                <h2>Security</h2>
+                <h2>Site map</h2>
+                <h2>Privacy policy</h2>
+                <h2>Terms & Conditions</h2>
+            
+                
+            </section>
+            <section>
+                <h1>Company</h1>
+                <h2>About us</h2>
+                <h2>Contactus</h2>
+                <h2>Service center</h2>
+                <h2>Careers</h2>
+                <h2>Affiliates</h2>
+            </section>
+            <section>
+ <hr style="border:1px solid white" width = "350%" /> 
+ <h1>2024|All rights reserved.Built by|sarvesh</h1>
+      
+
+           <div class="last">
+            <i style="padding:30px" class="fa-brands fa-facebook"></i>
+            <i style="padding:30px;" class="fa-brands fa-twitter"></i>
+            <i style="padding:30px ;" class="fa-brands fa-instagram"></i>
+            <i style="padding:20px ;" class="fa-brands fa-linkedin-in"></i> 
+           </div>
+         </section>
+
+        </footer> 
+        </body>
+        </html>
+    
+            
+
+    
+    
